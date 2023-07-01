@@ -1,0 +1,24 @@
+@mixin summaryNotes {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1.25rem;
+    }
+}
+
+@mixin note {
+    &-note {
+        display: flex;
+        &-left {
+            font-weight: bold;
+            margin-right: 0.65rem;
+        }
+        &-right {
+            color: rgba(48, 59, 89, 0.5);
+        }
+    }
+}

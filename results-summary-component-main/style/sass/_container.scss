@@ -1,0 +1,154 @@
+.container {
+    display: flex;
+    width: 70vh;
+    height: 50vh;
+    border-radius: 3rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .result {
+        width: 50%;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to top, $color-gradient-blue-2, $color-gradient-purple-1);
+        border-radius: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            height: 50%;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &__heading {
+            color: $color-light-blue;
+        }
+
+        &__number {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            background: linear-gradient(to top, $color-gradient-blue-2, $color-gradient-purple-2);
+            // box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.1);
+
+            &--top {
+                color: $color-white;
+                font-weight: bold;
+            }
+
+            &--bot {
+                color: $color-light-blue;
+            }
+        }
+
+        &__highlight {
+            color: $color-very-light-blue;
+        }
+
+        &__text {
+            color: $color-light-blue;
+            text-align: center;
+        }
+    }
+
+    .summary {
+        width: 50%;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            height: 50%;
+            padding: 3rem 4rem;
+        }
+
+        &__heading {
+            color: $color-dark-navy;
+            margin-bottom: 2rem;
+        }
+
+        &__notes {
+            &--reaction {
+                background-color: rgba(255, 85, 85, 0.05);
+
+                @include summaryNotes;
+                @include note;
+
+                &-text {
+                    color: $color-red;
+                }
+            }
+
+            &--memory {
+                background-color: rgba(255, 178, 30, 0.05);
+
+                @include summaryNotes;
+                @include note;
+
+                &-text {
+                    color: $color-yellow;
+                }
+            }
+
+            &--verbal {
+                background-color: rgba(0, 187, 143, 0.05);
+
+                @include summaryNotes;
+                @include note;
+
+                &-text {
+                    color: $color-green;
+                }
+            }
+
+            &--visual {
+                background-color: rgba(17, 37, 214, 0.05);
+
+                @include summaryNotes;
+                @include note;
+
+                &-text {
+                    color: $color-blue;
+                }
+            }
+        }
+
+        &__btn {
+            background: $color-dark-navy;
+            color: $color-very-light-blue;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            height: 4.5rem;
+            width: 100%;
+            border-radius: 10rem;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 5rem;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba($color-light-blue, 0.2);
+                background: linear-gradient(to top, $color-gradient-blue-2, $color-gradient-purple-1);
+            }
+        }
+    }
+}

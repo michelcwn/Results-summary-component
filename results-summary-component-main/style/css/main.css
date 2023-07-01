@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.8rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@font-face {
+  font-family: Hanken Grotesk;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype"); }
+.heading-XL {
+  font-size: 7.2rem; }
+
+.heading-L {
+  font-size: 3.2rem; }
+
+.heading-M {
+  font-size: 2.4rem; }
+
+.bold {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+.container {
+  display: flex;
+  width: 70vh;
+  height: 50vh;
+  border-radius: 3rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 50em) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%; } }
+  .container .result {
+    width: 50%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, #2521c9, #6943ff);
+    border-radius: 3rem; }
+    @media only screen and (max-width: 50em) {
+      .container .result {
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; } }
+    .container .result__heading {
+      color: #cac9ff; }
+    .container .result__number {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      background: linear-gradient(to top, #2521c9, #4d21c9); }
+      .container .result__number--top {
+        color: #ffffff;
+        font-weight: bold; }
+      .container .result__number--bot {
+        color: #cac9ff; }
+    .container .result__highlight {
+      color: #ecf2ff; }
+    .container .result__text {
+      color: #cac9ff;
+      text-align: center; }
+  .container .summary {
+    width: 50%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media only screen and (max-width: 50em) {
+      .container .summary {
+        width: 100%;
+        height: 50%;
+        padding: 3rem 4rem; } }
+    .container .summary__heading {
+      color: #303b59;
+      margin-bottom: 2rem; }
+    .container .summary__notes--reaction {
+      background-color: rgba(255, 85, 85, 0.05);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .container .summary__notes--reaction {
+          padding: 1.25rem; } }
+      .container .summary__notes--reaction-note {
+        display: flex; }
+        .container .summary__notes--reaction-note-left {
+          font-weight: bold;
+          margin-right: 0.65rem; }
+        .container .summary__notes--reaction-note-right {
+          color: rgba(48, 59, 89, 0.5); }
+      .container .summary__notes--reaction-text {
+        color: #ff5555; }
+    .container .summary__notes--memory {
+      background-color: rgba(255, 178, 30, 0.05);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .container .summary__notes--memory {
+          padding: 1.25rem; } }
+      .container .summary__notes--memory-note {
+        display: flex; }
+        .container .summary__notes--memory-note-left {
+          font-weight: bold;
+          margin-right: 0.65rem; }
+        .container .summary__notes--memory-note-right {
+          color: rgba(48, 59, 89, 0.5); }
+      .container .summary__notes--memory-text {
+        color: #ffb21e; }
+    .container .summary__notes--verbal {
+      background-color: rgba(0, 187, 143, 0.05);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .container .summary__notes--verbal {
+          padding: 1.25rem; } }
+      .container .summary__notes--verbal-note {
+        display: flex; }
+        .container .summary__notes--verbal-note-left {
+          font-weight: bold;
+          margin-right: 0.65rem; }
+        .container .summary__notes--verbal-note-right {
+          color: rgba(48, 59, 89, 0.5); }
+      .container .summary__notes--verbal-text {
+        color: #00bb8f; }
+    .container .summary__notes--visual {
+      background-color: rgba(17, 37, 214, 0.05);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .container .summary__notes--visual {
+          padding: 1.25rem; } }
+      .container .summary__notes--visual-note {
+        display: flex; }
+        .container .summary__notes--visual-note-left {
+          font-weight: bold;
+          margin-right: 0.65rem; }
+        .container .summary__notes--visual-note-right {
+          color: rgba(48, 59, 89, 0.5); }
+      .container .summary__notes--visual-text {
+        color: #1125d6; }
+    .container .summary__btn {
+      background: #303b59;
+      color: #ecf2ff;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      height: 4.5rem;
+      width: 100%;
+      border-radius: 10rem;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s; }
+      @media only screen and (max-width: 50em) {
+        .container .summary__btn {
+          height: 5rem; } }
+      .container .summary__btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(202, 201, 255, 0.2);
+        background: linear-gradient(to top, #2521c9, #6943ff); }
+
+/*# sourceMappingURL=main.css.map */

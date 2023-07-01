@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$color-yellow: #ffb21e;
+$color-blue: #1125d6;
+$color-green: #00bb8f;
+$color-red: #ff5555;
+$color-dark-navy: #303b59;
+$color-light-blue: #cac9ff;
+$color-very-light-blue: #ecf2ff;
+$color-white: #ffffff;
+$color-gradient-blue-1: #2f2ce9;
+$color-gradient-blue-2: #2521c9;
+$color-gradient-purple-1: #6943ff;
+$color-gradient-purple-2: #4d21c9;
+
+// RESPONSIVE BREAKPOINTS
+$bp-medium: 50em;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: "Hanken Grotesk", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
